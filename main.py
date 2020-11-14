@@ -5,6 +5,7 @@ Date  - 18 october 2020
 '''
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+form termcolor import cprint
 import time
 
 chatbot = ChatBot('Bot')
@@ -12,9 +13,9 @@ trainer = ChatterBotCorpusTrainer(chatbot)
 
 trainer.train('chatterbot.corpus.english')
 
-
-print('\t\t\t A Chatot')
-print('Type enrollment forms to enroll otherwise continue to talk with ChatBot')
+cprint("#" * 50, "magenta")
+cprint((f"A Chatot ").center(50), "yellow")
+cprint("#" * 50, "magenta")
 print('You can exit by type exit\n')
 while True:
     query = input(">> ")
